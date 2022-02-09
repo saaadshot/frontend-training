@@ -1,4 +1,4 @@
-class Utils {
+  class Utils {
     // write logic to find whether value is null
   isNull = (value) => {
     if (Object.is(value, null)) {
@@ -200,7 +200,54 @@ function findStats(definition) {
       }
       })
       stats.numberOfItems++;
-  });
+    });
+  
+  /* Here is the same above logic with simple for loop. The answers are different
+  
+      for(var obj in definition) {
+      const data = Object.values(obj);
+      for(var value in data) {
+
+      if (instance.isNull(value)) {
+      stats.null++;
+      }
+
+      if (instance.isUndefined(value)) {
+        stats.undefined++;
+      }
+
+      if (instance.isNumber(value)) {
+        stats.numbers++;
+      }
+
+      if (instance.isString(value)) {
+        stats.strings++;
+      }
+
+      if (instance.isBoolean(value)) {
+        stats.boolean++;
+      }
+
+      if (instance.isObject(value)) {
+        stats.objects++;
+      }
+        
+      if (instance.isArray(value)) {
+        stats.array++;
+      }
+        
+      if (instance.isTruthy(value)) {
+        stats.truthy++;
+      }
+        
+      if (instance.isFalsy(value)) {
+        stats.falsy++;
+      }
+      }
+      stats.numberOfItems++;
+    }
+
+  */
 
   return stats;
   }
